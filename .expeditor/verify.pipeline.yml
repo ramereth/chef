@@ -202,7 +202,7 @@ steps:
         environment:
           - FORCE_FFI_YAJL=ext
           - CHEF_LICENSE=accept-no-persist
-          - APPVEYOR=true
+          - BUILDKITE=true
         shell: ["powershell", "-Command"]
 
 - label: "Functional Specs Windows :ruby: 2.6"
@@ -215,7 +215,7 @@ steps:
         environment:
           - FORCE_FFI_YAJL=ext
           - CHEF_LICENSE=accept-no-persist
-          - APPVEYOR=true
+          - BUILDKITE=true
         shell: ["powershell", "-Command"]
 
 - label: "Unit Specs Windows :ruby: 2.6"

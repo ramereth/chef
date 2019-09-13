@@ -79,7 +79,7 @@ describe "chef_repo_path tests", :workstation do
         EOM
       end
 
-      it "knife list --local -Rfp --chef-repo-path chef_r~1 / grabs chef_repo2 stuff", :windows_only do
+      it "knife list --local -Rfp --chef-repo-path chef_r~1 / grabs chef_repo2 stuff", :windows_only :skip_buildkite do
         Chef::Config.delete(:chef_repo_path)
         knife("list --local -Rfp --chef-repo-path #{path_to("chef_r~1")} /").should_succeed <<~EOM
           /clients/
@@ -101,7 +101,7 @@ describe "chef_repo_path tests", :workstation do
         EOM
       end
 
-      it "knife list --local -Rfp --chef-repo-path chef_r~1 / grabs chef_repo2 stuff", :windows_only do
+      it "knife list --local -Rfp --chef-repo-path chef_r~1 / grabs chef_repo2 stuff", :windows_only :skip_buildkite do
         Chef::Config.delete(:chef_repo_path)
         knife("list -z -Rfp --chef-repo-path #{path_to("chef_r~1")} /").should_succeed <<~EOM
           /acls/

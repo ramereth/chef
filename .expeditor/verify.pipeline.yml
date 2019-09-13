@@ -199,10 +199,10 @@ steps:
     executor:
       docker:
         host_os: windows
-        os_version: 2016
         environment:
           - FORCE_FFI_YAJL=ext
           - CHEF_LICENSE=accept-no-persist
+          - APPVEYOR=true
         shell: ["powershell", "-Command"]
 
 - label: "Functional Specs Windows :ruby: 2.6"
@@ -212,10 +212,10 @@ steps:
     executor:
       docker:
         host_os: windows
-        os_version: 2016
         environment:
           - FORCE_FFI_YAJL=ext
           - CHEF_LICENSE=accept-no-persist
+          - APPVEYOR=true
         shell: ["powershell", "-Command"]
 
 - label: "Unit Specs Windows :ruby: 2.6"
